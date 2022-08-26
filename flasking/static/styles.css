@@ -1,3 +1,8 @@
+/* 151515 */
+/* 066A4C */
+
+/* SVG Wave */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   min-height: 100vh;
   background-color: #066A4C;
 }
@@ -22,7 +28,7 @@ body {
 }
 
 .wrapper .upload-area{
-    height: 167px;
+    height: 200px;
     display: flex;
     cursor: pointer;
     margin: 30px 0;
@@ -44,30 +50,10 @@ form :where(i, p){
     font-size: 16px;
   }
 
-  .progress-area {
-    width: 50%;
-    height: 10px;
-    border: 2px solid black;
-    border-radius: 7px;
-  }
+  
 
-  .progress {
-    position: absolute;
-  height: 100%;
 
-  background-color: #808080;
-  }
-
-  #play-animation {
-    animation: progress-animation 5s forwards;
-  }
-
-  @keyframes progress-animation {
-    0% { width: 0%; }
-    100% { width: 100%; }
-  }
-
-  .options {
+  #options {
     padding: 10px;
   }
 
@@ -108,13 +94,18 @@ form :where(i, p){
 	
 }
 /* Button CSS */
+
+.button-28 a {
+    text-decoration: none;
+    color: #3B3B3B;;
+}
+
 .button-28 {
   appearance: none;
   background-color: transparent;
   border: 2px solid #066A4C;
   border-radius: 15px;
   box-sizing: border-box;
-  color: #3B3B3B;
   cursor: pointer;
   display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
@@ -153,8 +144,140 @@ form :where(i, p){
   transform: translateY(0);
 }
 
+.links{
+    text-align: center;
+}
+
 .links a {
     color: #DDEEE9;
     text-decoration: none;
     font-size: 2rem;
+}
+
+
+/* CSS */
+.button-14 {
+  background-image: linear-gradient(#f7f8fa ,#e7e9ec);
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: rgba(255,255,255,.6) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  font-size: 14px;
+  height: 29px;
+  font-size: 13px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 11px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-14:active {
+  border-bottom-color: #a2a6ac;
+}
+
+.button-14:active:hover {
+  border-bottom-color: #a2a6ac;
+}
+
+.button-14:hover {
+  border-color: #a2a6ac #979aa1 #82858a;
+}
+
+.button-14:focus {
+  border-color: #e77600;
+  box-shadow: rgba(228, 121, 17, .5) 0 0 3px 2px;
+  outline: 0;
+}
+
+/* Progress bar */
+
+.progress-area {
+    background-color: #d8d8d8;
+	border-radius: 20px;
+    position: relative;
+    /* top: 0;
+    bottom: 10;
+    left: 0;
+    right: 0; */
+    margin: auto;
+    border-radius: 30px;
+	height: 10px;
+	width: 350px;
+  }
+
+.progress {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background-color: limegreen;
+    border-radius: 30px;
+    /* animation: move 3s linear; */
+}
+
+@keyframes move {
+    to {
+        width: 100%;
+    }
+}
+
+/* nav {
+  position: relative;
+} */
+
+.nav-header {
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #DDEEE9;
+  width: 100%;
+}
+
+.nav-header img {
+  display: block;
+  text-align: center;
+  width: 150px;
+  /* padding-left: 20px; */
+  margin: 16px;
+}
+
+.sih_logo {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .sih_logo img {
+  display: inline;
+} */
+
+.sih_logo h1 {
+  text-transform: uppercase;
+  color: #066A4C;
+  /* display: inline-block; */
+  /* position: relative; 
+   left: 600px; */
+  text-align: center;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <center>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +9,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/28927562b4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>RECIEVE</title>
 </head>
  
 <body>
-
   <center>
     <div class="wrapper">
-      <form id="upload" action="/recv" method="post" enctype="multipart/form-data">
+      <form id="upload">
         
       <div class="options">
         
         <div class="option">
           <label for="encrypt">Encrypt </label> 
-          <input type="checkbox" id="encrypt" name="check" value="encrypt">
+          <input type="checkbox" id="encrypt">
         </div>
+
+       
        
         <div class="option" id="hidden" style="display: none">
-          <input id="password" type="password" name="psk">
+          <input id="password" type="password">
           <label for="password">Password</label>
         </div>
       </div>
@@ -38,15 +39,43 @@
         
       </form>
 
-      <div class="progress-area">
+      <!-- <div class="progress-area">
         <div class="progress"></div>
-      </div>
-      <div class="compressed-area"></div>
+      </div> -->
+      <!-- <div class="compressed-area"></div> -->
     </div>
 
 
 
-    <script src="send.js"></script>
+    <script>
+      const encrypt = document.getElementById('encrypt');
+      const hidden = document.getElementById('hidden');
+      const uploadFile = document.getElementById("upload");
+
+      encrypt.addEventListener('change', (e) => {
+    if (e.target.checked){
+        hidden.style.display = "block";
+    } else {
+        hidden.style.display = "none";
+    }
+}); 
+
+uploadFile.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData();
+    formData.append('user-password', password.value);
+    fetch('https://httpbin.org/post', {
+        method: 'POST',
+        body: formData
+    })
+    .then(resp => resp.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
+
+});
+  </script>
+</center>
 </body>
 
 </html>
