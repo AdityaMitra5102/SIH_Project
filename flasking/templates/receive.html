@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <center>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/28927562b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+ 
+<body>
+
+  <center>
+    <div class="wrapper">
+      <form id="upload" action="/recv" method="post" enctype="multipart/form-data">
+        
+      <div class="options">
+        
+        <div class="option">
+          <label for="encrypt">Encrypt </label> 
+          <input type="checkbox" id="encrypt" name="check" value="encrypt">
+        </div>
+       
+        <div class="option" id="hidden" style="display: none">
+          <input id="password" type="password" name="psk">
+          <label for="password">Password</label>
+        </div>
+      </div>
+        
+        <div class="submit-btn">
+          <button type="submit" class="button-28" role="button">Submit</button>
+        </div>
+        
+      </form>
+
+      <div class="progress-area">
+        <div class="progress"></div>
+      </div>
+      <div class="compressed-area"></div>
+    </div>
+
+
+
+    <script src="send.js"></script>
+</body>
+
+</html>
+  
+
