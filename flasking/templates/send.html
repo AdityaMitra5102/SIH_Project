@@ -5,47 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/28927562b4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/28927562b4.js" crossorigin="anonymous"></script>
+    <title>SEND</title>
 </head>
 <body>
   <center>
     <div class="wrapper">
-      <form id="upload" action="/send" method="post" enctype="multipart/form-data"> 
+      <form id="upload" action="/send" method="post" enctype="multipart/form-data">
         <div class="upload-area">
-        <input type="file" id="myFile" name="file">
-        <i class="fas fa-cloud-upload-alt"></i>
-        <p>Browse File to Upload</p>
+        <input type="file" id="myFile" name="file" multiple hidden>
+        <i class="fa-solid fa-arrow-up-to-line"></i>
+        <!-- <h3>Click To Upload</h3> -->
+        <br>
+        <button id="input_btn" class="button-14" role="button">Upload</button>
       </div>
-      <div class="options">
+      <div id="options" style="display: none">
         <div class="option">
           <label for="1">Compress</label> 
-          <input type="checkbox" id="1" name="check" value="compress"> <br>
+          <input class="check" type="checkbox" id="compress" name="check" value="compress"> <br>
         </div>
+
+        <div class="progress-area" id="on_compress">
+          <div class="progress"></div>
+        </div>
+
+        <!-- <div class="compressed-area"></div> -->
+
         <div class="option">
           <label for="encrypt">Encrypt </label> 
           <input type="checkbox" id="encrypt" name="check" value="encrypt">
         </div>
+
+       
        
         <div class="option" id="hidden" style="display: none">
-          <input id="password" type="password" name="psk">
+          <input id="password" type="password">
           <label for="password">Password</label>
         </div>
       </div>
         
         <div class="submit-btn">
-          <input type="submit" class="button-28">Submit</button>
+          <button type="submit" class="button-28" role="button">Submit</button>
         </div>
         
       </form>
 
-      <div class="progress-area">
-        <div class="progress"></div>
-      </div>
-      <div class="compressed-area"></div>
+      
     </div>
       
    
@@ -64,8 +72,12 @@
           
       </form>
    -->
-  
+   <!-- <a href="/success.html">Submit</a> -->
     </center>
+
+    <div class="footer">
+    <h3>HUSTLERS_VIT</h3>
+  </div>
 
 
     <script src="send.js"></script>
