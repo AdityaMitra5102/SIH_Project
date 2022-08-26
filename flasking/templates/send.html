@@ -8,15 +8,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/28927562b4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>SEND</title>
 </head>
 <body>
   <center>
     <div class="wrapper">
-      <form id="upload">
+      <form id="upload" action="/send" method="post" enctype="multipart/form-data">
         <div class="upload-area">
-        <input type="file" id="myFile" name="filename" multiple hidden>
+        <input type="file" id="myFile" name="file" multiple hidden>
         <i class="fas fa-cloud-upload-alt"></i>
         <p>Browse File to Upload</p>
         <br>
@@ -25,7 +25,7 @@
       <div id="options" style="display: none">
         <div class="option">
           <label for="1">Compress</label> 
-          <input class="check" type="checkbox" id="compress" name="1" value="hus"> <br>
+          <input class="check" type="checkbox" id="compress" name="check" value="compress"> <br>
         </div>
 
         <div class="progress-area" id="on_compress" style="display: none">
@@ -36,7 +36,7 @@
 
         <div class="option">
           <label for="encrypt">Encrypt </label> 
-          <input type="checkbox" id="encrypt">
+          <input type="checkbox" id="encrypt" name="check" value="encrypt">
         </div>
 
        
@@ -76,7 +76,7 @@
     </center>
 
 
-    <script src="../static/send.js"></script>
+    <script src="send.js"></script>
 </body>
 
 
