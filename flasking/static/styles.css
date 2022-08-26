@@ -20,15 +20,19 @@ body {
 }
 
 .wrapper {
-  width: 430px;
-  background: #fff;
+  width: 700px;
+  height: 500px;
+  background-color: #DDEEE9;
   border-radius: 7px;
   padding: 30px;
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+  border: 10px solid #7CC4AC;
 }
 
 .wrapper .upload-area{
-    height: 200px;
+  width: 80%;
+    height: 250px;
+    padding: 16px;
     display: flex;
     cursor: pointer;
     margin: 30px 0;
@@ -37,17 +41,19 @@ body {
     flex-direction: column;
     border-radius: 5px;
     border: 2px dashed #808080;
+    background-color: #fff;
   }
 
-form :where(i, p){
+
+form :where(i, h3){
     color: #808080;
   }
   form i{
-    font-size: 50px;
+    font-size: 20px;
   }
-  form p{
+  form h3{
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 2rem;
   }
 
   
@@ -108,12 +114,13 @@ form :where(i, p){
   box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  /* font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; */
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
   margin: 0;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  /* margin-bottom: 10px; */
   min-height: 10px;
   min-width: 0;
   outline: none;
@@ -124,7 +131,8 @@ form :where(i, p){
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 50%;
+  width: 30%;
+  height: 30%;
   will-change: transform;
 }
 
@@ -145,15 +153,45 @@ form :where(i, p){
 }
 
 .links{
-    text-align: center;
+  margin: 20px;
+  text-align: center;
 }
 
 .links a {
-    color: #DDEEE9;
+    color: #68BD97;
     text-decoration: none;
     font-size: 2rem;
 }
 
+.links button {
+  margin: 10px;
+}
+
+.file_types {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  color: #DDEEE9;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 16px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #DDEEE9;
+  color: #066A4C;
+  text-align: center;
+}
+
+.footer h3{
+  padding: 16px;
+}
 
 /* CSS */
 .button-14 {
@@ -221,7 +259,7 @@ form :where(i, p){
     width: 0%;
     height: 100%;
     position: absolute;
-    background-color: limegreen;
+    background-color: #066A4C;
     border-radius: 30px;
     /* animation: move 3s linear; */
 }
@@ -281,3 +319,92 @@ form :where(i, p){
    left: 600px; */
   text-align: center;
 }
+
+
+/* CSS */
+.button-81 {
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-81:hover {
+  background-color: #DDEEE9;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/*Toggle Button 
+.check {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	margin: 10px;
+}
+.check:after {
+	content: '';
+	width: 60px;
+	height: 28px;
+	display: inline-block;
+	background: rgba(196, 195, 195, 0.55);
+	border-radius: 18px;
+	clear: both;
+} */
+
+/* .check:before {
+	content: '';
+	width: 32px;
+	height: 32px;
+	display: block;
+	position: absolute;
+	left: 0; 
+  top: 0px;
+	border-radius: 50%;background: rgb(255, 255, 255);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.check:checked:before {
+	left: 32px;
+	box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.check:checked:after {
+	background: #16a085;
+}
+
+.check,
+.check:before,
+.check:after,
+.check:checked:before,
+.check:checked:after {
+	transition: ease .3s;
+	-webkit-transition: ease .3s;
+	-moz-transition: ease .3s;
+	-o-transition: ease .3s;
+}  */
